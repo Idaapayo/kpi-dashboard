@@ -2,37 +2,15 @@
 
 import { Box, SimpleGrid } from '@chakra-ui/react';
 import DateRangePicker from '@/components/ui/date-range-picker';
-import { useQuery } from '@tanstack/react-query';
-import { fetchExpensesData, fetchSalesData } from '@/util/mock-api';
-import { Expense, Sale } from '@/types/types';
 import { useMemo, useState } from 'react';
 import { LooseValue } from 'react-calendar/src/shared/types';
 import { subDays } from 'date-fns';
 import { filterDataByDateRange } from '@/utils/utils';
-import {
-    generateCustomersData,
-    generateExpensesData,
-    generateSalesData,
-} from '@/utils/mock-data';
-// import { StatCard } from '@/components/stats/stats-card';
 import { StatLabel, StatRoot, StatValueText } from '@/components/ui/stat';
+import { useDataContext } from '@/components/providers/data-provider';
 
 export default function StatsCardsSection() {
-    // const { data: sales, isLoading: isLoadingSales } = useQuery<Sale[]>({
-    //     queryKey: ['sales-util'],
-    //     queryFn: fetchSalesData,
-    // }) ;
-    //
-    // const { data: expenses, isLoading: isLoadingExpenses } = useQuery({
-    //     queryKey: ['expense-util'],
-    //     queryFn: fetchExpensesData,
-    // });
-
-    const customers = generateCustomersData();
-    const sales = generateSalesData(customers);
-    const expenses = generateExpensesData();
-
-    console.log({ expenses });
+    const { sales, expenses } = useDataContext();
 
     const [activeDateRange, setActiveDateRange] = useState<string[]>(['last7']);
     const [showDateRangePicker, setShowDateRangePicker] =
@@ -48,8 +26,6 @@ export default function StatsCardsSection() {
     // console.log({ activeDateRange });
 
     const stats = useMemo(() => {
-        // if (isLoadingSales || isLoadingExpenses || !sales || !expenses)
-        //     return { sales: 0, expenses: 0, netProfit: 0, activeUsers: 0 };
         let startDate: Date = customRange[0] ? customRange[0] : new Date();
         const endDate: Date = customRange[1] ? customRange[1] : new Date();
 
@@ -80,8 +56,6 @@ export default function StatsCardsSection() {
                 .size,
         };
     }, [activeDateRange, customRange, expenses, sales]);
-
-    console.log({ stats });
 
     return (
         <Box>

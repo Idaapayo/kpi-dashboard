@@ -1,11 +1,10 @@
-import { Box, Button, createListCollection, Flex } from '@chakra-ui/react';
+import { Box, createListCollection, Flex } from '@chakra-ui/react';
 import Calendar from 'react-calendar';
 import { LooseValue, Value } from 'react-calendar/src/shared/types';
 import { Dispatch, SetStateAction } from 'react';
 import {
     SelectContent,
     SelectItem,
-    SelectLabel,
     SelectRoot,
     SelectTrigger,
     SelectValueText,

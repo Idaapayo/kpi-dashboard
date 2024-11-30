@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import StatsCardsSection from '@/components/stats/stats-cards-section';
+import { DataProvider } from '@/components/providers/data-provider';
 
 export default function Home() {
     return (
@@ -9,9 +10,11 @@ export default function Home() {
             display="flex"
             className="flex w-screen p-5 bg-white dark:bg-teal-950 text-black dark:text-white"
         >
-            <Box flex={'1'}>
-                <StatsCardsSection />
-            </Box>
+            <DataProvider>
+                <Box flex={'1'}>
+                    <StatsCardsSection />
+                </Box>
+            </DataProvider>
         </Box>
     );
 }
