@@ -51,8 +51,11 @@ export default function DateRangePicker({
                     value={activeRangeDate}
                     onValueChange={(e) => setActiveRangeDate(e.value)}
                 >
-                    <SelectLabel>Select date range</SelectLabel>
-                    <SelectTrigger>
+                    <SelectTrigger
+                        className={
+                            'border border-gray-300 rounded-lg py-1 px-2'
+                        }
+                    >
                         <SelectValueText placeholder="Select date range" />
                     </SelectTrigger>
                     <SelectContent>
@@ -64,16 +67,18 @@ export default function DateRangePicker({
                     </SelectContent>
                 </SelectRoot>
                 {activeRangeDate.includes('custom') && (
-                    <Button
-                        onClick={() =>
-                            setShowDateRangePicker(!showDateRangePicker)
-                        }
-                        colorScheme="teal"
-                    >
-                        {showDateRangePicker
-                            ? 'Hide Date Picker'
-                            : 'Select Date Range'}
-                    </Button>
+                    <div className="flex flex-row gap-5 items-center ">
+                        <button
+                            className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition"
+                            onClick={() =>
+                                setShowDateRangePicker(!showDateRangePicker)
+                            }
+                        >
+                            {showDateRangePicker
+                                ? 'Hide Date Picker'
+                                : 'Open Date Picker'}
+                        </button>
+                    </div>
                 )}
             </Flex>
             {showDateRangePicker && activeRangeDate.includes('custom') && (
