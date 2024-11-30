@@ -36,14 +36,14 @@ export default function BubbleChart() {
             return (
                 sum +
                 customerSales.reduce((subSum, sale) => subSum + sale.amount, 0)
-            ); // Total sales amount for the region
+            );
         }, 0);
 
         return {
             region,
-            regionIndex: index, // Use index as x-axis value
-            salesCount: activityCount, // Use activity count as y-axis value
-            totalSalesAmount, // Tooltip data
+            regionIndex: index,
+            salesCount: activityCount,
+            totalSalesAmount,
             size: activityCount,
         };
     });
@@ -56,6 +56,11 @@ export default function BubbleChart() {
             borderWidth="1px"
             borderColor="border.disabled"
             style={{ width: '100%', minWidth: 0 }}
+            _dark={{
+                bg: 'gray.800',
+                color: 'white',
+                borderColor: 'gray.500',
+            }}
         >
             {/* Customer Activity by Region Chart */}
             <Card.Root>
@@ -90,7 +95,7 @@ export default function BubbleChart() {
                             <ZAxis
                                 type="number"
                                 dataKey="size" // Maps to bubble size
-                                range={[50, 400]} // Adjust size range (pixel radius)
+                                range={[50, 400]}
                             />
                             <Tooltip
                                 formatter={(value, name, entry) => {

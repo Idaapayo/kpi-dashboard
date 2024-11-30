@@ -84,7 +84,13 @@ export const StatCard: React.FC<{ title: string; value: number }> = ({
     title,
     value,
 }) => (
-    <Box p="4" bg="white" rounded="md" shadow="md">
+    <Box
+        p="4"
+        bg="white"
+        rounded="md"
+        shadow="md"
+        _dark={{ bg: 'gray.800', color: 'white' }}
+    >
         <StatRoot>
             <StatLabel>{title}</StatLabel>
             <StatValueText

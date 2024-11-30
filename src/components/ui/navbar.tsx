@@ -8,10 +8,12 @@ const Navbar = () => {
             as="nav"
             px="4"
             py="2"
-            bg={{ base: 'white', _dark: 'teal.900' }}
-            color="secondary"
-            borderBottomWidth="2px"
-            borderBottomColor="accent"
+            bg={'white'}
+            _dark={{ bg: 'gray.800', color: 'white', border: 'none' }}
+            shadow={'md'}
+            color="black"
+            borderBottomWidth="1px"
+            borderBottomColor="gray.200"
         >
             <Flex justifyContent="space-between" alignItems="center">
                 {/* Logo */}

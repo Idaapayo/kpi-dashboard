@@ -1,6 +1,6 @@
 'use client';
 
-import { SetStateAction, useState } from 'react';
+import { SetStateAction, useMemo, useState } from 'react';
 import { useDataContext } from '@/components/providers/data-provider';
 import {
     Table,
@@ -39,29 +39,29 @@ export default function TransactionTable() {
         setFilterType(e.value);
     };
 
-    // Filter and search the transactions
-    const filteredTransactions = transactions
-        .filter((transaction) => {
-            if (!filterType && !searchQuery) {
-                return true;
-            }
-            const matchesSearchQuery = searchQuery
-                ? transaction.id.toString().includes(searchQuery) ||
-                  transaction.date.includes(searchQuery)
-                : true;
+    const filteredTransactions = useMemo(() => {
+        return transactions
+            .filter((transaction) => {
+                if (!filterType && !searchQuery) {
+                    return true;
+                }
+                const matchesSearchQuery = searchQuery
+                    ? transaction.id.toString().includes(searchQuery) ||
+                      transaction.date.includes(searchQuery)
+                    : true;
 
-            const matchesFilterType = filterType
-                ? transaction.type === filterType[0]
-                : true;
-            return matchesSearchQuery && matchesFilterType;
-        })
-        .sort((a, b) => {
-            // Sort by date, from most recent to least recent
-            const dateA = new Date(a.date);
-            const dateB = new Date(b.date);
-            // @ts-ignore
-            return dateB - dateA;
-        });
+                const matchesFilterType = filterType
+                    ? transaction.type === filterType[0]
+                    : true;
+                return matchesSearchQuery && matchesFilterType;
+            })
+            .sort((a, b) => {
+                // Sort by date, from most recent to least recent
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return dateB.getTime() - dateA.getTime(); // Use getTime for consistency
+            });
+    }, [transactions, filterType, searchQuery]); // Dependencies
 
     const filterByTypeOptions = createListCollection({
         items: [
@@ -78,6 +78,11 @@ export default function TransactionTable() {
             borderWidth="1px"
             borderColor="border.disabled"
             m={[2, 4, 4]}
+            _dark={{
+                bg: 'gray.800',
+                color: 'white',
+                borderColor: 'gray.500',
+            }}
         >
             <Text fontSize="lg" fontWeight="bold">
                 Transaction Table
@@ -97,11 +102,15 @@ export default function TransactionTable() {
                                 'border border-gray-300 rounded-lg py-1 px-2'
                             }
                         >
-                            <SelectValueText placeholder="Select date range" />
+                            <SelectValueText placeholder="Filter by type" />
                         </SelectTrigger>
                         <SelectContent>
                             {filterByTypeOptions.items.map((type) => (
-                                <SelectItem item={type} key={type.value}>
+                                <SelectItem
+                                    _dark={{ bg: 'gray-700', color: 'white' }}
+                                    item={type}
+                                    key={type.value}
+                                >
                                     {type.label}
                                 </SelectItem>
                             ))}

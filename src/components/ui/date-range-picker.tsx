@@ -63,7 +63,11 @@ export default function DateRangePicker({
                     </SelectTrigger>
                     <SelectContent>
                         {ranges.items.map((range) => (
-                            <SelectItem item={range} key={range.value}>
+                            <SelectItem
+                                item={range}
+                                key={range.value}
+                                _dark={{ bg: 'gray-700', color: 'white' }}
+                            >
                                 {range.label}
                             </SelectItem>
                         ))}
@@ -94,8 +98,13 @@ export default function DateRangePicker({
                     bg="gray.50"
                     minWidth="350px"
                     minHeight="350px"
+                    _dark={{
+                        bg: 'gray.800',
+                        borderColor: 'gray.500',
+                    }}
                 >
                     <Calendar
+                        className=""
                         onChange={handleDateRangeChange}
                         value={customRange}
                         selectRange={true}

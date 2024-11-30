@@ -11,7 +11,7 @@ export default function Home() {
             display="flex"
             bg={'gray.100'}
             w="100%"
-            // maxWidth="100%"
+            _dark={{ bg: 'gray.800' }}
             overflowX="hidden"
         >
             <Box flex="1" flexDirection="column" display="flex" minWidth="0">
