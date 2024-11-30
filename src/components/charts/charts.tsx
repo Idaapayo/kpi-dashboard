@@ -17,6 +17,7 @@ import {
     Pie,
     Cell,
 } from 'recharts';
+import BubbleChart from '@/components/charts/bubble-chart';
 
 export default function Charts() {
     const { sales, expenses, regions } = useDataContext();
@@ -64,7 +65,7 @@ export default function Charts() {
     }));
 
     // Format expenses data for the Pie Chart
-    const categoryData = expenses.reduce((acc, { category, amount }) => {
+    const categoryData = expenses.reduce((acc: any, { category, amount }) => {
         acc[category] = (acc[category] || 0) + amount;
         return acc;
     }, {});
@@ -79,96 +80,119 @@ export default function Charts() {
     return (
         <Box className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
             {/* Line Chart */}
-            <Card.Root>
-                <Card.Header>
-                    <Text fontSize="lg" fontWeight="bold">
-                        Sales and Expenses Trends
-                    </Text>
-                    <Button
-                        size="sm"
-                        mt={2}
-                        onClick={() => setCumulative(!cumulative)}
-                        colorScheme="teal"
-                    >
-                        Toggle {cumulative ? 'Monthly' : 'Cumulative'}
-                    </Button>
-                </Card.Header>
-                <Card.Body>
-                    <ResponsiveContainer width="100%" height={300}>
-                        <LineChart data={monthlyData}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="month" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Line
-                                type="monotone"
-                                dataKey="sales"
-                                stroke="#8884d8"
-                            />
-                            <Line
-                                type="monotone"
-                                dataKey="expenses"
-                                stroke="#82ca9d"
-                            />
-                        </LineChart>
-                    </ResponsiveContainer>
-                </Card.Body>
-            </Card.Root>
-
+            <Box
+                p="6"
+                bg="white"
+                rounded="md"
+                borderWidth="1px"
+                borderColor="border.disabled"
+            >
+                <Card.Root>
+                    <Card.Header>
+                        <Text fontSize="lg" fontWeight="bold">
+                            Sales and Expenses Trends
+                        </Text>
+                        <Button
+                            size="sm"
+                            mt={2}
+                            onClick={() => setCumulative(!cumulative)}
+                            colorScheme="teal"
+                        >
+                            Toggle {cumulative ? 'Monthly' : 'Cumulative'}
+                        </Button>
+                    </Card.Header>
+                    <Card.Body>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <LineChart data={monthlyData}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="month" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Line
+                                    type="monotone"
+                                    dataKey="sales"
+                                    stroke="#8884d8"
+                                />
+                                <Line
+                                    type="monotone"
+                                    dataKey="expenses"
+                                    stroke="#82ca9d"
+                                />
+                            </LineChart>
+                        </ResponsiveContainer>
+                    </Card.Body>
+                </Card.Root>
+            </Box>
             {/* Bar Chart */}
-            <Card.Root>
-                <Card.Header>
-                    <Text fontSize="lg" fontWeight="bold">
-                        Revenue by Region
-                    </Text>
-                </Card.Header>
-                <Card.Body>
-                    <ResponsiveContainer width="100%" height={300}>
-                        <BarChart data={regionData}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="region" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Bar dataKey="revenue" fill="#8884d8" />
-                        </BarChart>
-                    </ResponsiveContainer>
-                </Card.Body>
-            </Card.Root>
-
+            <Box
+                p="6"
+                bg="white"
+                rounded="md"
+                borderWidth="1px"
+                borderColor="border.disabled"
+            >
+                <Card.Root>
+                    <Card.Header>
+                        <Text fontSize="lg" fontWeight="bold">
+                            Revenue by Region
+                        </Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <BarChart data={regionData}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="region" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Bar dataKey="revenue" fill="#8884d8" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </Card.Body>
+                </Card.Root>
+            </Box>
             {/* Pie Chart */}
-            <Card.Root>
-                <Card.Header>
-                    <Text fontSize="lg" fontWeight="bold">
-                        Expenses by Category
-                    </Text>
-                </Card.Header>
-                <Card.Body>
-                    <ResponsiveContainer width="100%" height={300}>
-                        <PieChart>
-                            <Pie
-                                data={pieData}
-                                dataKey="value"
-                                nameKey="category"
-                                cx="50%"
-                                cy="50%"
-                                outerRadius={100}
-                                fill="#8884d8"
-                                label
-                            >
-                                {pieData.map((entry, index) => (
-                                    <Cell
-                                        key={`cell-${index}`}
-                                        fill={COLORS[index % COLORS.length]}
-                                    />
-                                ))}
-                            </Pie>
-                            <Tooltip />
-                        </PieChart>
-                    </ResponsiveContainer>
-                </Card.Body>
-            </Card.Root>
+            <Box
+                p="6"
+                bg="white"
+                rounded="md"
+                borderWidth="1px"
+                borderColor="border.disabled"
+            >
+                <Card.Root>
+                    <Card.Header>
+                        <Text fontSize="lg" fontWeight="bold">
+                            Expenses by Category
+                        </Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <PieChart>
+                                <Pie
+                                    data={pieData}
+                                    dataKey="value"
+                                    nameKey="category"
+                                    cx="50%"
+                                    cy="50%"
+                                    outerRadius={100}
+                                    fill="#8884d8"
+                                    label
+                                >
+                                    {pieData.map((entry, index) => (
+                                        <Cell
+                                            key={`cell-${index}`}
+                                            fill={COLORS[index % COLORS.length]}
+                                        />
+                                    ))}
+                                </Pie>
+                                <Tooltip />
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </Card.Body>
+                </Card.Root>
+            </Box>
+            <BubbleChart />
         </Box>
     );
 }
