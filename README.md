@@ -1,6 +1,8 @@
 # Dashboard Project
 
 This is a web-based dashboard that displays various statistics, charts, and transaction data. It is designed to provide an overview of key business metrics like sales, expenses, net profit, and more.
+
+## Screencast
 https://github.com/user-attachments/assets/f375bf8a-015d-45b9-a276-d2afbf5222a4
 
 ## Thought Process
