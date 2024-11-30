@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Project
 
-## Getting Started
+This is a web-based dashboard that displays various statistics, charts, and transaction data. It is designed to provide an overview of key business metrics like sales, expenses, net profit, and more.
 
-First, run the development server:
+## Thought Process
+To create this project, I followed these steps:
+* Set up all the technology needed and decide the libraries to use for data-fetching, charts and calendar
+* Get an overview of the workings of Chakra UI
+* Generate fake data and serve it using JSON server
+* Create a context that fetches data, handles loading, error states and caching and exposing only the fetched data
+* Create components for the UI and populate them using the data from the context
+* Testing and clean-up of the code
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Key Features:
+- **Filtering data by range**:The KPI cards allow you to filter the data by a range of dates
+- **Interactive Charts**: Line charts for sales and expenses trends, bar charts for revenue by region, bubble charts to show customer activity by region and pie charts for expenses by category.
+- **Transaction Filtering**: Ability to filter and search transactions based on type and date.
+- **Responsive Design**: Ensured the dashboard is fully responsive and adapts to different screen sizes using Chakra UI for UI components and Recharts for the data visualizations.
+- **Performance Optimization**: Used `useMemo` for memoization of expensive operations like filtering and sorting transactions to improve performance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Challenges Faced
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. **Responsive Design and Layout Issues**
+Ensuring that the dashboard was responsive across various screen sizes was challenging, particularly when it came to chart and table layouts. The charts would often overflow or not resize correctly on smaller screens.
+- **Solution**: I used Chakra UI's responsive styles (such as `w="100%"` and `maxWidth="100%"`) and wrapped the charts inside `ResponsiveContainer` from Recharts. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. **Picking a custom range of dates for the KPI cards**
+I had a tough time finding the right calendar library that would allow picking of a range of dates without type issues
+- **Solution**: I found react-calendar and downloaded the types library and expose the types for the range of dates
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Future Improvements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. **Advanced Data Visualizations**
+- Adding advanced drill down charts that can show a bar chart of sales over time when a bubble on the bubbleChart is clicked.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. **Data Export**
+- Implementing a feature to export the filtered transaction data and chart visualizations as CSV or PDF files could make this dashboard more useful for business reporting.
 
-## Deploy on Vercel
+### 3. **Real-time Data**
+- Currently, the dashboard displays static data. Integrating real-time data updates (using WebSockets or polling) to provide live updates.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5. **Styling and Theming**
+- Custom styling for the react-calendar to match the theme 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Setup Instructions
+
+### Prerequisites:
+- Node.js (v18 or later)
+
+### Installation:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/dashboard-project.git
+    ```
+
+2. Install dependencies:
+    ```bash
+    cd dashboard-project
+    npm install
+    ```
+
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
+4. Start the json server
+    ```bash
+     npx json-server --watch db.json --port 3001
+    ```
+
+### Running the Project:
+- Once the server is running, open your browser and go to `http://localhost:3000` to view the dashboard.
+
+
