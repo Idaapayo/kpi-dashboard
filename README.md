@@ -1,13 +1,14 @@
 # Dashboard Project
 
 This is a web-based dashboard that displays various statistics, charts, and transaction data. It is designed to provide an overview of key business metrics like sales, expenses, net profit, and more.
+https://github.com/user-attachments/assets/f375bf8a-015d-45b9-a276-d2afbf5222a4
 
 ## Thought Process
 To create this project, I followed these steps:
 * Set up all the technology needed and decide the libraries to use for data-fetching, charts and calendar
 * Get an overview of the workings of Chakra UI
 * Generate fake data and serve it using JSON server
-* Create a context that fetches data, handles loading, error states and caching and exposing only the fetched data
+* Create a context that fetches data, handles loading, error states and caching and exposes only the fetched data
 * Create components for the UI and populate them using the data from the context
 * Testing and clean-up of the code
 
@@ -17,6 +18,7 @@ To create this project, I followed these steps:
 - **Transaction Filtering**: Ability to filter and search transactions based on type and date.
 - **Responsive Design**: Ensured the dashboard is fully responsive and adapts to different screen sizes using Chakra UI for UI components and Recharts for the data visualizations.
 - **Performance Optimization**: Used `useMemo` for memoization of expensive operations like filtering and sorting transactions to improve performance.
+- **Dark mode**
 
 ## Challenges Faced
 
@@ -26,13 +28,13 @@ Ensuring that the dashboard was responsive across various screen sizes was chall
 
 ### 2. **Picking a custom range of dates for the KPI cards**
 I had a tough time finding the right calendar library that would allow picking of a range of dates without type issues
-- **Solution**: I found react-calendar and downloaded the types library and expose the types for the range of dates
+- **Solution**: I found react-calendar and downloaded the types library and exposed the types for the range of dates
 
 
 ## Future Improvements
 
 ### 1. **Advanced Data Visualizations**
-- Adding advanced drill down charts that can show a bar chart of sales over time when a bubble on the bubbleChart is clicked.
+- Adding advanced drill-down charts that can show a bar chart of sales over time when a bubble on the bubbleChart is clicked.
 
 ### 2. **Data Export**
 - Implementing a feature to export the filtered transaction data and chart visualizations as CSV or PDF files could make this dashboard more useful for business reporting.
