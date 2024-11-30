@@ -44,17 +44,20 @@ export default function DateRangePicker({
 
     return (
         <Box>
-            <Flex marginBottom={2} align="center" gap={2}>
+            <Flex marginBottom={2} align="center" gap={[1, 2, 2]}>
                 <SelectRoot
                     collection={ranges}
                     width="320px"
                     value={activeRangeDate}
                     onValueChange={(e) => setActiveRangeDate(e.value)}
+                    bg={'white'}
+                    _dark={{ bg: 'gray.800', color: 'white' }}
                 >
                     <SelectTrigger
-                        className={
-                            'border border-gray-300 rounded-lg py-1 px-2'
-                        }
+                        borderWidth="1px"
+                        borderColor="border.disabled"
+                        p={2}
+                        rounded={'md'}
                     >
                         <SelectValueText placeholder="Select date range" />
                     </SelectTrigger>

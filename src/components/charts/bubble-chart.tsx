@@ -50,14 +50,15 @@ export default function BubbleChart() {
 
     return (
         <Box
-            p="6"
+            p={[1, 4, 6]}
             bg="white"
             rounded="md"
             borderWidth="1px"
             borderColor="border.disabled"
+            style={{ width: '100%', minWidth: 0 }}
         >
             {/* Customer Activity by Region Chart */}
-            <Card.Root className="shadow-md">
+            <Card.Root>
                 <Card.Body>
                     <Text fontSize="lg" fontWeight="bold" mb={4}>
                         Customer Activity by Region

@@ -48,16 +48,16 @@ export default function StatsCardsSection() {
             0,
         );
         return {
-            sales: totalSales,
-            expenses: totalExpenses,
-            netProfit: totalSales - totalExpenses,
+            sales: parseFloat(totalSales.toFixed(2)),
+            expenses: parseFloat(totalExpenses.toFixed(2)),
+            netProfit: parseFloat((totalSales - totalExpenses).toFixed(2)),
             activeUsers: new Set(filteredSales.map((sale) => sale.customerId))
                 .size,
         };
     }, [activeDateRange, customRange, expenses, sales]);
 
     return (
-        <Box>
+        <Box p={[2, 4, 4]}>
             <DateRangePicker
                 dateRangeChoices={selectDateRangeChoices}
                 showDateRangePicker={showDateRangePicker}
@@ -66,7 +66,11 @@ export default function StatsCardsSection() {
                 activeRangeDate={activeDateRange}
                 setActiveRangeDate={setActiveDateRange}
             />
-            <SimpleGrid columns={[2, null, 4]} gap="40px" width={'100%'}>
+            <SimpleGrid
+                columns={[2, 2, 4]}
+                gap={['20px', '40px', '40px']}
+                width={'100%'}
+            >
                 <StatCard title={'Total sales'} value={stats.sales} />
                 <StatCard title={'Total expenses'} value={stats.expenses} />
                 <StatCard title={'Net profit'} value={stats.netProfit} />
@@ -80,7 +84,7 @@ export const StatCard: React.FC<{ title: string; value: number }> = ({
     title,
     value,
 }) => (
-    <Box p="6" bg="white" rounded="md" shadow="md">
+    <Box p="4" bg="white" rounded="md" shadow="md">
         <StatRoot>
             <StatLabel>{title}</StatLabel>
             <StatValueText

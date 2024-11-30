@@ -72,12 +72,12 @@ export default function TransactionTable() {
 
     return (
         <Box
-            p="6"
+            p="4"
             bg="white"
             rounded="md"
             borderWidth="1px"
             borderColor="border.disabled"
-            m={'4'}
+            m={[2, 4, 4]}
         >
             <Text fontSize="lg" fontWeight="bold">
                 Transaction Table
@@ -85,11 +85,11 @@ export default function TransactionTable() {
 
             {/* Search and Filter Section */}
             <Box display="flex" gap={4} mb={4} mt={5}>
-                <div className="flex flex-row items-center gap-5 ">
+                <div className="flex justify-start flex-col md:flex-row items-center gap-5 ">
                     <SelectRoot
                         collection={filterByTypeOptions}
                         value={filterType}
-                        width="320px"
+                        width="250px"
                         onValueChange={handleFilterChange}
                     >
                         <SelectTrigger

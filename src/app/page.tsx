@@ -10,9 +10,11 @@ export default function Home() {
             minHeight="100vh"
             display="flex"
             bg={'gray.100'}
-            width={'100%'}
+            w="100%"
+            // maxWidth="100%"
+            overflowX="hidden"
         >
-            <Box flex={'1'} flexDirection={'column'}>
+            <Box flex="1" flexDirection="column" display="flex" minWidth="0">
                 <StatsCardsSection />
                 <Charts />
                 <TransactionTable />
