@@ -175,9 +175,10 @@ export default function Charts() {
                                     nameKey="category"
                                     cx="50%"
                                     cy="50%"
-                                    outerRadius={100}
                                     fill="#8884d8"
-                                    label
+                                    label={(entry) => `${entry.category}`}
+                                    innerRadius={40}
+                                    outerRadius={80}
                                 >
                                     {pieData.map((entry, index) => (
                                         <Cell

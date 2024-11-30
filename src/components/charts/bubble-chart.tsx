@@ -102,6 +102,7 @@ export default function BubbleChart() {
                                         )}`;
                                     }
                                     if (name === 'Region') {
+                                        // @ts-ignore
                                         return `${regions[value]}`;
                                     }
                                     return value;

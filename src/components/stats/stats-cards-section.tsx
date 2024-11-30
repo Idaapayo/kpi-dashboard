@@ -3,6 +3,7 @@
 import { Box, SimpleGrid } from '@chakra-ui/react';
 import DateRangePicker from '@/components/ui/date-range-picker';
 import { useMemo, useState } from 'react';
+// @ts-ignore
 import { LooseValue } from 'react-calendar/src/shared/types';
 import { subDays } from 'date-fns';
 import { filterDataByDateRange } from '@/utils/utils';
@@ -22,8 +23,6 @@ export default function StatsCardsSection() {
         { label: 'last 30 days', value: 'last30' },
         { label: 'custom range', value: 'custom' },
     ];
-
-    // console.log({ activeDateRange });
 
     const stats = useMemo(() => {
         let startDate: Date = customRange[0] ? customRange[0] : new Date();

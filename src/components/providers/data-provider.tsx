@@ -1,6 +1,6 @@
 'use client';
 
-import { Customer, Expense, Sale } from '@/types/types';
+import { Customer, Expense, Sale, Transaction } from '@/types/types';
 import { createContext, ReactNode, useContext } from 'react';
 import { regions } from '@/utils/mock-data';
 import { fetchData } from '@/api/api';
@@ -12,6 +12,7 @@ interface DataContextProps {
     expenses: Expense[];
     customers: Customer[];
     regions: string[];
+    transactions: Transaction[];
 }
 
 const DataContext = createContext<DataContextProps | undefined>(undefined);
@@ -46,16 +47,37 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({
         queryKey: ['expenses'],
     });
 
-    if (isLoadingCustomers || isLoadingSales || isLoadingExpenses) {
+    const {
+        data: transactions = [],
+        isLoading: isLoadingTransactions,
+        isError: isErrorTransactions,
+    } = useQuery<Transaction[]>({
+        queryFn: async () => await fetchData('transactions'),
+        queryKey: ['transactions'],
+    });
+
+    if (
+        isLoadingCustomers ||
+        isLoadingSales ||
+        isLoadingExpenses ||
+        isLoadingTransactions
+    ) {
         return <Spinner size="xl" />;
     }
 
-    if (isErrorCustomers || isErrorSales || isErrorExpenses) {
+    if (
+        isErrorCustomers ||
+        isErrorSales ||
+        isErrorExpenses ||
+        isErrorTransactions
+    ) {
         return <div>Error loading data</div>;
     }
 
     return (
-        <DataContext.Provider value={{ sales, expenses, regions, customers }}>
+        <DataContext.Provider
+            value={{ sales, expenses, regions, customers, transactions }}
+        >
             {children}
         </DataContext.Provider>
     );

@@ -17,3 +17,11 @@ export interface Expense {
     amount: number;
     category: string;
 }
+
+export interface Transaction {
+    id: number;
+    date: string;
+    amount: number;
+    type: 'sale' | 'expense';
+    status: 'completed' | 'pending';
+}
