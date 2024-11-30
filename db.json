@@ -1,0 +1,908 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "location": "North America"
+    },
+    {
+      "id": 2,
+      "location": "Asia"
+    },
+    {
+      "id": 3,
+      "location": "Africa"
+    },
+    {
+      "id": 4,
+      "location": "North America"
+    },
+    {
+      "id": 5,
+      "location": "North America"
+    },
+    {
+      "id": 6,
+      "location": "North America"
+    },
+    {
+      "id": 7,
+      "location": "Asia"
+    },
+    {
+      "id": 8,
+      "location": "Europe"
+    },
+    {
+      "id": 9,
+      "location": "Africa"
+    },
+    {
+      "id": 10,
+      "location": "South America"
+    },
+    {
+      "id": 11,
+      "location": "Asia"
+    },
+    {
+      "id": 12,
+      "location": "South America"
+    },
+    {
+      "id": 13,
+      "location": "Asia"
+    },
+    {
+      "id": 14,
+      "location": "South America"
+    },
+    {
+      "id": 15,
+      "location": "Asia"
+    },
+    {
+      "id": 16,
+      "location": "Africa"
+    },
+    {
+      "id": 17,
+      "location": "South America"
+    },
+    {
+      "id": 18,
+      "location": "North America"
+    },
+    {
+      "id": 19,
+      "location": "Africa"
+    },
+    {
+      "id": 20,
+      "location": "Africa"
+    },
+    {
+      "id": 21,
+      "location": "North America"
+    },
+    {
+      "id": 22,
+      "location": "South America"
+    },
+    {
+      "id": 23,
+      "location": "North America"
+    },
+    {
+      "id": 24,
+      "location": "Africa"
+    },
+    {
+      "id": 25,
+      "location": "North America"
+    },
+    {
+      "id": 26,
+      "location": "Asia"
+    },
+    {
+      "id": 27,
+      "location": "Asia"
+    },
+    {
+      "id": 28,
+      "location": "Europe"
+    },
+    {
+      "id": 29,
+      "location": "North America"
+    },
+    {
+      "id": 30,
+      "location": "North America"
+    },
+    {
+      "id": 31,
+      "location": "Asia"
+    },
+    {
+      "id": 32,
+      "location": "South America"
+    },
+    {
+      "id": 33,
+      "location": "South America"
+    },
+    {
+      "id": 34,
+      "location": "North America"
+    },
+    {
+      "id": 35,
+      "location": "North America"
+    },
+    {
+      "id": 36,
+      "location": "North America"
+    },
+    {
+      "id": 37,
+      "location": "Europe"
+    },
+    {
+      "id": 38,
+      "location": "South America"
+    },
+    {
+      "id": 39,
+      "location": "South America"
+    },
+    {
+      "id": 40,
+      "location": "Africa"
+    },
+    {
+      "id": 41,
+      "location": "South America"
+    },
+    {
+      "id": 42,
+      "location": "Africa"
+    },
+    {
+      "id": 43,
+      "location": "South America"
+    },
+    {
+      "id": 44,
+      "location": "Africa"
+    },
+    {
+      "id": 45,
+      "location": "Africa"
+    },
+    {
+      "id": 46,
+      "location": "North America"
+    },
+    {
+      "id": 47,
+      "location": "Europe"
+    },
+    {
+      "id": 48,
+      "location": "Europe"
+    },
+    {
+      "id": 49,
+      "location": "North America"
+    },
+    {
+      "id": 50,
+      "location": "Europe"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "date": "2024-08-02",
+      "amount": 9353.01,
+      "region": "North America",
+      "customerId": 21
+    },
+    {
+      "id": 2,
+      "date": "2024-04-22",
+      "amount": 6996.61,
+      "region": "Africa",
+      "customerId": 45
+    },
+    {
+      "id": 3,
+      "date": "2024-07-23",
+      "amount": 3312.18,
+      "region": "Europe",
+      "customerId": 47
+    },
+    {
+      "id": 4,
+      "date": "2023-12-22",
+      "amount": 8872.29,
+      "region": "Africa",
+      "customerId": 45
+    },
+    {
+      "id": 5,
+      "date": "2024-03-21",
+      "amount": 6141.71,
+      "region": "Africa",
+      "customerId": 44
+    },
+    {
+      "id": 6,
+      "date": "2024-03-31",
+      "amount": 4600.67,
+      "region": "North America",
+      "customerId": 36
+    },
+    {
+      "id": 7,
+      "date": "2024-01-04",
+      "amount": 6432.01,
+      "region": "South America",
+      "customerId": 14
+    },
+    {
+      "id": 8,
+      "date": "2024-06-30",
+      "amount": 6114.17,
+      "region": "South America",
+      "customerId": 17
+    },
+    {
+      "id": 9,
+      "date": "2024-06-09",
+      "amount": 2044.9,
+      "region": "South America",
+      "customerId": 32
+    },
+    {
+      "id": 10,
+      "date": "2024-09-15",
+      "amount": 2514.52,
+      "region": "North America",
+      "customerId": 21
+    },
+    {
+      "id": 11,
+      "date": "2024-10-31",
+      "amount": 6219.41,
+      "region": "Africa",
+      "customerId": 3
+    },
+    {
+      "id": 12,
+      "date": "2024-06-12",
+      "amount": 2756.64,
+      "region": "South America",
+      "customerId": 17
+    },
+    {
+      "id": 13,
+      "date": "2024-09-18",
+      "amount": 8034.64,
+      "region": "North America",
+      "customerId": 30
+    },
+    {
+      "id": 14,
+      "date": "2024-09-12",
+      "amount": 1992.67,
+      "region": "Africa",
+      "customerId": 9
+    },
+    {
+      "id": 15,
+      "date": "2024-04-23",
+      "amount": 2635.95,
+      "region": "South America",
+      "customerId": 38
+    },
+    {
+      "id": 16,
+      "date": "2024-02-02",
+      "amount": 1594.15,
+      "region": "South America",
+      "customerId": 22
+    },
+    {
+      "id": 17,
+      "date": "2024-03-10",
+      "amount": 6155.09,
+      "region": "Asia",
+      "customerId": 15
+    },
+    {
+      "id": 18,
+      "date": "2024-01-09",
+      "amount": 3137.68,
+      "region": "Europe",
+      "customerId": 50
+    },
+    {
+      "id": 19,
+      "date": "2024-11-17",
+      "amount": 354.27,
+      "region": "North America",
+      "customerId": 46
+    },
+    {
+      "id": 20,
+      "date": "2024-07-27",
+      "amount": 9705.48,
+      "region": "North America",
+      "customerId": 5
+    },
+    {
+      "id": 21,
+      "date": "2024-07-07",
+      "amount": 394.24,
+      "region": "North America",
+      "customerId": 25
+    },
+    {
+      "id": 22,
+      "date": "2024-11-23",
+      "amount": 9227.52,
+      "region": "Africa",
+      "customerId": 20
+    },
+    {
+      "id": 23,
+      "date": "2023-12-11",
+      "amount": 8212.92,
+      "region": "Africa",
+      "customerId": 9
+    },
+    {
+      "id": 24,
+      "date": "2024-08-14",
+      "amount": 4806.55,
+      "region": "Asia",
+      "customerId": 13
+    },
+    {
+      "id": 25,
+      "date": "2024-05-12",
+      "amount": 4571.13,
+      "region": "Africa",
+      "customerId": 20
+    },
+    {
+      "id": 26,
+      "date": "2023-12-01",
+      "amount": 5547.3,
+      "region": "Africa",
+      "customerId": 20
+    },
+    {
+      "id": 27,
+      "date": "2024-09-14",
+      "amount": 1556.27,
+      "region": "Asia",
+      "customerId": 31
+    },
+    {
+      "id": 28,
+      "date": "2024-06-27",
+      "amount": 4995.16,
+      "region": "South America",
+      "customerId": 12
+    },
+    {
+      "id": 29,
+      "date": "2024-08-09",
+      "amount": 9265.21,
+      "region": "North America",
+      "customerId": 5
+    },
+    {
+      "id": 30,
+      "date": "2024-08-03",
+      "amount": 1751.79,
+      "region": "Africa",
+      "customerId": 24
+    },
+    {
+      "id": 31,
+      "date": "2024-05-12",
+      "amount": 4500.87,
+      "region": "South America",
+      "customerId": 32
+    },
+    {
+      "id": 32,
+      "date": "2024-03-15",
+      "amount": 5912.42,
+      "region": "North America",
+      "customerId": 5
+    },
+    {
+      "id": 33,
+      "date": "2024-08-08",
+      "amount": 1231.76,
+      "region": "Africa",
+      "customerId": 16
+    },
+    {
+      "id": 34,
+      "date": "2023-12-09",
+      "amount": 7687.73,
+      "region": "Asia",
+      "customerId": 13
+    },
+    {
+      "id": 35,
+      "date": "2024-09-11",
+      "amount": 1411.34,
+      "region": "Asia",
+      "customerId": 11
+    },
+    {
+      "id": 36,
+      "date": "2024-07-19",
+      "amount": 1072.94,
+      "region": "Asia",
+      "customerId": 15
+    },
+    {
+      "id": 37,
+      "date": "2024-08-02",
+      "amount": 6903.98,
+      "region": "North America",
+      "customerId": 4
+    },
+    {
+      "id": 38,
+      "date": "2024-06-14",
+      "amount": 6711.06,
+      "region": "North America",
+      "customerId": 18
+    },
+    {
+      "id": 39,
+      "date": "2024-10-05",
+      "amount": 6969.17,
+      "region": "Africa",
+      "customerId": 3
+    },
+    {
+      "id": 40,
+      "date": "2024-01-24",
+      "amount": 3589.97,
+      "region": "Africa",
+      "customerId": 44
+    },
+    {
+      "id": 41,
+      "date": "2024-04-24",
+      "amount": 2326.03,
+      "region": "North America",
+      "customerId": 35
+    },
+    {
+      "id": 42,
+      "date": "2023-12-03",
+      "amount": 4170.89,
+      "region": "North America",
+      "customerId": 1
+    },
+    {
+      "id": 43,
+      "date": "2024-06-24",
+      "amount": 4090.37,
+      "region": "Asia",
+      "customerId": 26
+    },
+    {
+      "id": 44,
+      "date": "2024-11-18",
+      "amount": 1148.72,
+      "region": "North America",
+      "customerId": 25
+    },
+    {
+      "id": 45,
+      "date": "2024-08-12",
+      "amount": 2925.98,
+      "region": "South America",
+      "customerId": 12
+    },
+    {
+      "id": 46,
+      "date": "2024-06-15",
+      "amount": 5999.09,
+      "region": "Asia",
+      "customerId": 31
+    },
+    {
+      "id": 47,
+      "date": "2024-03-27",
+      "amount": 7698.03,
+      "region": "Asia",
+      "customerId": 2
+    },
+    {
+      "id": 48,
+      "date": "2024-09-06",
+      "amount": 186.09,
+      "region": "South America",
+      "customerId": 43
+    },
+    {
+      "id": 49,
+      "date": "2024-06-05",
+      "amount": 5248.1,
+      "region": "Africa",
+      "customerId": 42
+    },
+    {
+      "id": 50,
+      "date": "2023-12-24",
+      "amount": 2695.48,
+      "region": "North America",
+      "customerId": 1
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "date": "2024-09-12",
+      "amount": 1279.94,
+      "category": "Technology",
+      "region": "Africa"
+    },
+    {
+      "id": 2,
+      "date": "2024-05-13",
+      "amount": 3049.34,
+      "category": "Marketing",
+      "region": "Asia"
+    },
+    {
+      "id": 3,
+      "date": "2024-03-15",
+      "amount": 4916.69,
+      "category": "Operations",
+      "region": "Europe"
+    },
+    {
+      "id": 4,
+      "date": "2024-01-27",
+      "amount": 3713.31,
+      "category": "Marketing",
+      "region": "Africa"
+    },
+    {
+      "id": 5,
+      "date": "2024-10-19",
+      "amount": 729.53,
+      "category": "Miscellaneous",
+      "region": "North America"
+    },
+    {
+      "id": 6,
+      "date": "2024-10-25",
+      "amount": 3139.47,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 7,
+      "date": "2024-06-26",
+      "amount": 840.39,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 8,
+      "date": "2024-06-11",
+      "amount": 1058.62,
+      "category": "Miscellaneous",
+      "region": "Europe"
+    },
+    {
+      "id": 9,
+      "date": "2024-02-14",
+      "amount": 840.92,
+      "category": "Operations",
+      "region": "Africa"
+    },
+    {
+      "id": 10,
+      "date": "2024-05-14",
+      "amount": 1397.83,
+      "category": "Marketing",
+      "region": "Africa"
+    },
+    {
+      "id": 11,
+      "date": "2024-01-24",
+      "amount": 2356.51,
+      "category": "Operations",
+      "region": "South America"
+    },
+    {
+      "id": 12,
+      "date": "2024-02-14",
+      "amount": 1606.3,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 13,
+      "date": "2024-05-18",
+      "amount": 4950.22,
+      "category": "Marketing",
+      "region": "Asia"
+    },
+    {
+      "id": 14,
+      "date": "2024-07-24",
+      "amount": 2443.79,
+      "category": "HR",
+      "region": "Asia"
+    },
+    {
+      "id": 15,
+      "date": "2024-07-17",
+      "amount": 4588.47,
+      "category": "Operations",
+      "region": "South America"
+    },
+    {
+      "id": 16,
+      "date": "2024-09-16",
+      "amount": 1678.35,
+      "category": "Operations",
+      "region": "North America"
+    },
+    {
+      "id": 17,
+      "date": "2024-06-11",
+      "amount": 3967.33,
+      "category": "Marketing",
+      "region": "North America"
+    },
+    {
+      "id": 18,
+      "date": "2024-04-20",
+      "amount": 478.44,
+      "category": "HR",
+      "region": "Europe"
+    },
+    {
+      "id": 19,
+      "date": "2024-02-01",
+      "amount": 2174.33,
+      "category": "Technology",
+      "region": "Asia"
+    },
+    {
+      "id": 20,
+      "date": "2024-05-06",
+      "amount": 2589.36,
+      "category": "Miscellaneous",
+      "region": "South America"
+    },
+    {
+      "id": 21,
+      "date": "2024-08-25",
+      "amount": 1295.96,
+      "category": "HR",
+      "region": "South America"
+    },
+    {
+      "id": 22,
+      "date": "2024-06-01",
+      "amount": 1073.78,
+      "category": "Marketing",
+      "region": "North America"
+    },
+    {
+      "id": 23,
+      "date": "2024-02-10",
+      "amount": 3433.96,
+      "category": "Operations",
+      "region": "North America"
+    },
+    {
+      "id": 24,
+      "date": "2024-11-22",
+      "amount": 2572.45,
+      "category": "Marketing",
+      "region": "Europe"
+    },
+    {
+      "id": 25,
+      "date": "2024-01-08",
+      "amount": 943.81,
+      "category": "Technology",
+      "region": "Africa"
+    },
+    {
+      "id": 26,
+      "date": "2024-08-02",
+      "amount": 3254.88,
+      "category": "Technology",
+      "region": "Africa"
+    },
+    {
+      "id": 27,
+      "date": "2024-05-18",
+      "amount": 2770.01,
+      "category": "Operations",
+      "region": "South America"
+    },
+    {
+      "id": 28,
+      "date": "2024-04-21",
+      "amount": 844.22,
+      "category": "Marketing",
+      "region": "Asia"
+    },
+    {
+      "id": 29,
+      "date": "2024-07-14",
+      "amount": 496.98,
+      "category": "Technology",
+      "region": "Africa"
+    },
+    {
+      "id": 30,
+      "date": "2024-07-12",
+      "amount": 4819.04,
+      "category": "Marketing",
+      "region": "Europe"
+    },
+    {
+      "id": 31,
+      "date": "2024-06-14",
+      "amount": 4136.9,
+      "category": "Miscellaneous",
+      "region": "North America"
+    },
+    {
+      "id": 32,
+      "date": "2024-06-27",
+      "amount": 3663.19,
+      "category": "Marketing",
+      "region": "Europe"
+    },
+    {
+      "id": 33,
+      "date": "2024-03-05",
+      "amount": 3946.4,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 34,
+      "date": "2024-06-21",
+      "amount": 31.44,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 35,
+      "date": "2024-10-11",
+      "amount": 488.34,
+      "category": "Operations",
+      "region": "Asia"
+    },
+    {
+      "id": 36,
+      "date": "2024-04-05",
+      "amount": 3529.04,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 37,
+      "date": "2024-03-08",
+      "amount": 1104.5,
+      "category": "Technology",
+      "region": "Europe"
+    },
+    {
+      "id": 38,
+      "date": "2024-05-25",
+      "amount": 410.86,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 39,
+      "date": "2024-05-29",
+      "amount": 2442.95,
+      "category": "HR",
+      "region": "North America"
+    },
+    {
+      "id": 40,
+      "date": "2024-11-06",
+      "amount": 1223.77,
+      "category": "Operations",
+      "region": "Asia"
+    },
+    {
+      "id": 41,
+      "date": "2024-02-29",
+      "amount": 3403.13,
+      "category": "Miscellaneous",
+      "region": "Asia"
+    },
+    {
+      "id": 42,
+      "date": "2024-01-08",
+      "amount": 1087.85,
+      "category": "Miscellaneous",
+      "region": "North America"
+    },
+    {
+      "id": 43,
+      "date": "2024-03-21",
+      "amount": 2289.96,
+      "category": "Marketing",
+      "region": "Europe"
+    },
+    {
+      "id": 44,
+      "date": "2024-01-25",
+      "amount": 1031.76,
+      "category": "Operations",
+      "region": "Asia"
+    },
+    {
+      "id": 45,
+      "date": "2024-06-25",
+      "amount": 1845.67,
+      "category": "Operations",
+      "region": "South America"
+    },
+    {
+      "id": 46,
+      "date": "2024-07-28",
+      "amount": 2598.53,
+      "category": "Technology",
+      "region": "Africa"
+    },
+    {
+      "id": 47,
+      "date": "2024-02-13",
+      "amount": 4438.84,
+      "category": "Technology",
+      "region": "Asia"
+    },
+    {
+      "id": 48,
+      "date": "2024-07-08",
+      "amount": 906.47,
+      "category": "Technology",
+      "region": "North America"
+    },
+    {
+      "id": 49,
+      "date": "2024-10-25",
+      "amount": 3502.44,
+      "category": "Operations",
+      "region": "South America"
+    },
+    {
+      "id": 50,
+      "date": "2024-02-08",
+      "amount": 1869.5,
+      "category": "Marketing",
+      "region": "South America"
+    }
+  ]
+}

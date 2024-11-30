@@ -1,4 +1,7 @@
-import { Customer } from '@/types/types';
+import { Customer, Expense, Sale } from '@/types/types';
+import { faker } from '@faker-js/faker';
+import * as fs from 'node:fs';
+import path from 'node:path';
 
 export const regions = [
     'North America',
@@ -19,7 +22,7 @@ export const expenseCategories = [
 export function generateCustomersData() {
     const customersData = [];
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 200; i++) {
         const customer = {
             id: i + 1,
             location: regions[Math.floor(Math.random() * regions.length)], // Randomly assign a region
@@ -32,7 +35,7 @@ export function generateCustomersData() {
 export function generateSalesData(customers: Customer[]) {
     const salesData = [];
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 200; i++) {
         const customer =
             customers[Math.floor(Math.random() * customers.length)];
         const sale = {
@@ -53,7 +56,7 @@ export function generateSalesData(customers: Customer[]) {
 export function generateExpensesData() {
     const expensesData = [];
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 200; i++) {
         const expense = {
             id: i + 1,
             date: randomDate(
