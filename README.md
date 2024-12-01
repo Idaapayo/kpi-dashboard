@@ -68,13 +68,7 @@ I had a tough time finding the right calendar library that would allow picking o
     ```bash
     npm run dev
     ```
-or
-    
-4. Start the production server:
-    ```bash
-    npm run build && npm run start
-    ```
-5. Start the json server
+4. Start the json server
     ```bash
      npx json-server --watch db.json --port 3001
     ```
